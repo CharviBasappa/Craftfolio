@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-const Marquee = () => {
+const MarqueeComponent = () => {
   return (
     <Marquee speed={50} gradient={false}>
       <p style={{ marginRight: "40px" }}>React.js</p>
@@ -12,4 +12,4 @@ const Marquee = () => {
   );
 };
 
-export default Marquee;
+export default MarqueeComponent;
