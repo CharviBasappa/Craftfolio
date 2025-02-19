@@ -7,27 +7,19 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import ScrollIndicator from "./components/ScrollIndicator";
 
 const App = () => {
   return (
-    // <Router>
-    //   <Navbar />
-    //   <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/about" element={<About />} />
-    //     <Route path="/skills" element={<Skills />} />
-    //     <Route path="/projects" element={<Projects />} />
-    //     <Route path="/contact" element={<Contact />} />
-    //   </Routes>
-    //   <Footer />
-    // </Router>
     <ThemeProvider>
+      <ScrollIndicator />
       <Navbar />
       <Home />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      <Footer />
     </ThemeProvider>
   );
 };
