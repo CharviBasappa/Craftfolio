@@ -1,24 +1,29 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../ThemeContext";
 
 const Navbar = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+
   return (
     <nav className="nav">
       <h1>My Portfolio</h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <a href="#about">About</a>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <a href="#skills">Skills</a>
         </li>
         <li>
-          <Link to="/skills">Skills</Link>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <a href="#contact">Contact</a>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <button onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+          </button>
         </li>
       </ul>
     </nav>
