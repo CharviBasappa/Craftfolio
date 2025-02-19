@@ -16,16 +16,13 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="glassmorphism">
       <h1>About Me</h1>
       <motion.div
         data-scroll="true"
         data-scroll-sticky="true"
         data-scroll-target="#fixed-target"
         className="about-content"
-        style={{
-          transform: `translateY(${scrollPosition * 0.1}px)`,
-        }}
       >
         <motion.img
           src={profileImage}
