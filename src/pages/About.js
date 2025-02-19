@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import profileImage from "../assets/profile.jpg";
 
 const About = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,6 +27,14 @@ const About = () => {
           transform: `translateY(${scrollPosition * 0.1}px)`,
         }}
       >
+        <motion.img
+          src={profileImage}
+          alt="Profile"
+          className="profile-image"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        />
         <p>
           I'm a full-stack software developer specializing in{" "}
           <strong>Python, ReactJS, Redux, Node.js, and FastAPI</strong>.
